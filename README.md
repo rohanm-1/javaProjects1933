@@ -1,5 +1,5 @@
 This is my repository for all the Java projects for CSCI 1933 - Introduction to Data 
-Structures and Algorithms at the University of Minnesota: Twin Cities. Here is a quick overview of each project:
+Structures and Algorithms at the University of Minnesota: Twin Cities. Here is an overview of each project:
 
 **Project 1:**
 
