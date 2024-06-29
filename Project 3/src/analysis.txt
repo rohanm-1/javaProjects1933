@@ -1,0 +1,19 @@
+Complexity Analysis for mentioned methods:
+
+Method                                   ArrayList Runtime                                 LinkedList Runtime (Worst cases, ignoring sorting)
+boolean add(T element)                  O(n^2) (with isSorted)                                              O(n)
+T getMax()                         O(n) (if not sorted), O(1) (if sorted)                                   O(n^2)
+removeDuplicates()                      Worst case O(n^3)                                                   O(n^3)
+reverse()                                      O(n)                                                         O(n)
+
+Explanation (ArrayList)
+add: Starts by looping through the list once (O(n)). After adding the element, we check if it's sorted, it loops through the ArrayList again, making it O(n^2).
+getMax: If it is sorted, we simply return the last element (O(1)). If not, we traverse through the ArrayList to find the max (O(n)).
+removeDuplicates: The worst case is O(n^3) because we use 2 nested loops to compare the indices and we also call remove() (which is O(n), n*n*n = n^3) to check if they are equal (O(n^3)).
+reverse: The runtime is simply O(n/2) (simplifies to O(n)) because we use 2 pointers and we know that once half of the list is reversed, the other half must also be reversed.
+
+Explanation (LinkedList)
+add: Worst case is O(n) because we loop through the entire linked list to add the node.
+getMax: Worse case is O(n^2) because we use a selection sort to sort the list and then return the tail (the maximum) node.
+removeDuplicates: We use a nested for loop which iterates through the size of the linked list to check for duplicates. We also call remove() within the for loop (O(n^3)).
+reverse: We use a 2 pointer approach to reverse the linked list, similar to the ArrayList reverse() method. This will only traverse half of the list, making the runtime O(n/2), which simplifies to O(n).
